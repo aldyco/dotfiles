@@ -1,0 +1,101 @@
+My Personal Config
+
+* List of Program to be installed from Github / manual sources
+  1. Chemacs
+     [[https://github.com/plexus/chemacs][Github]]
+     #+begin_src sh
+       git clone https://github.com/plexus/chemacs.git $HOME/github/chemacs
+       cd $HOME/github/chemacs
+       ./install.sh
+       CHEMACS_PROFILES=$HOME/.emacs-profiles.el
+       if [ -f "$CHEMACS_PROFILES" ]; then
+         echo "$CHEMACS_PROFILES exist"
+       else
+         echo '(("default" . ((user-emacs-directory . "~/.emacs.d")))
+              ("doom" . ((user-emacs-directory . "~/github/doom-emacs")
+                        (env . (("DOOMDIR" . "~/.doom.d"))))))' > $HOME/.emacs-profiles.el
+       fi
+     #+end_src
+
+  2. Bash-it
+     [[https://github.com/Bash-it/bash-it][Github]]
+     #+begin_src sh
+       git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/github/bash_it
+       cd ~/github/bash_it
+       ./install.sh
+     #+end_src
+
+  3. Doom Emacs
+     [[https://github.com/hlissner/doom-emacs][Github]]
+     #+begin_src sh
+       git clone --depth 1 https://github.com/hlissner/doom-emacs ~/github/doom-emacs
+       ~/github/doom-emacs/bin/doom install
+     #+end_src
+
+  4. Leiningen
+     [[https://leiningen.org/][Homepage]]
+     #+begin_src sh
+       BIN_HOME=$HOME/bin
+       if [ -f "$BIN_HOME" ]; then
+         echo "$BIN_HOME exist"
+       else
+         echo "Creating $BIN_HOME"
+         mkdir $BIN_HOME
+       fi
+       wget -O $BIN_HOME https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+       chmod a+x $BIN_HOME/lein
+       $BIN_HOME/lein
+     #+end_src
+
+  5. NVM
+     [[https://github.com/nvm-sh/nvm][Github]]
+     #+begin_src sh
+       curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+     #+end_src
+
+  6. Node
+     [[https://nodejs.org/en/][Homepage]]
+     Prerequisite: NVM
+     #+begin_src sh
+       if ! [ -x "$(command -v nvm)" ]; then
+         echo 'Error: nvm is not installed.' >&2
+         exit 1
+       else
+         nvm install node
+       fi
+     #+end_src
+
+
+* Apt install
+  1. Powerline fonts
+     [[https://github.com/powerline/fonts][Github]]
+
+  2. Brave browser
+     [[https://brave.com/][Homepage]]
+     #+begin_src sh
+       curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+
+       echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+     #+end_src
+
+  3.
+
+  4. All apt install
+  #+begin_src sh
+    sudo apt update && sudo apt install -y fonts-powerline brave-browser
+  #+end_src
+
+
+
+
+* Other Software
+  1. Visual Studio Code
+     [[https://code.visualstudio.com/][Homepage]]
+
+  2. Google Chrome
+     [[https://www.google.com/chrome/][Homepage]]
+
+  3. Firefox
+     [[https://www.mozilla.org/en-US/firefox/new/][Homepage]]
+
+  4.
