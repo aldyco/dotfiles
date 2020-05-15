@@ -1,0 +1,73 @@
+[settings]
+columns = ~#track,~people,~title~version,~album~discsubtitle,~#length
+	
+default_rating = 0.5
+scan = /data/Music
+
+[memory]
+browser = AlbumList
+browser_playlistsbrowser_maximized = 4
+browser_playlistsbrowser_position = 608 24
+browser_playlistsbrowser_size_ = 600 400
+chooser_dir = /data/Music
+column_expands = ~people,1,~title~version,1,~album~discsubtitle,1
+	
+column_widths = ~people,-1,~title~version,-1,~album~discsubtitle,-1
+	
+open_browsers = 
+plugin_prefs_maximized = 0
+plugin_prefs_position = 262 124
+plugin_prefs_size_ = 700 500
+plugin_selection = python_query
+prefs_page = tagging
+queue = False
+queue_expanded = True
+queue_position = 0.6324503311258278
+quodlibet_information_maximized = 0
+quodlibet_information_position = 483 186
+quodlibet_information_size_ = 400 400
+quodlibet_last_active_version = 4.2.1
+quodlibet_maximized = 4
+quodlibet_position = 0 26
+quodlibet_size_ = 600 480
+seek = 234424
+shuffle = True
+shufflequeue = true
+sidebar_pos = 0.7920937042459737
+song = /data/Music/Dewa 19/Dewa 19 - Kerajaan Cinta/12 - Perasaanku Tentang Perasaanku Kepadamu.mp3
+sortby = 0~#track
+	
+volume = 0.057444986775944784
+
+[player]
+gst_buffer = 3.0
+replaygain = true
+replaygain_mode = auto
+
+[browsers]
+albumlist_pos = 0.5277264325323475
+albums = 
+collectionbrowser_pos = 0.4
+panedbrowser_pane_widths = 0.49853658536585366
+panedbrowser_pos = 0.40365111561866124
+playlist = New Playlist 3
+playlistsbrowser_pos = 0.4224390243902439
+query_text = 
+
+[__config__]
+version = 0
+
+[plugins]
+active_plugins = WebLyrics
+	View Lyrics
+	SynchronizedLyrics
+animosd_monitor = 0
+cover_engine_amazon = True
+cover_engine_discogs = True
+quodlibet.fake.plugins.gajim_status_accounts = 
+quodlibet.fake.plugins.gajim_status_pattern = <artist> - <title>
+quodlibet.fake.plugins.gajim_status_paused = True
+quodlibet.fake.plugins.gajim_status_statuses = online chat
+scrobbler_service = Last.fm
+squeezebox_debug = False
+
