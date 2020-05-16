@@ -1,0 +1,14 @@
+#!/bin/bash
+
+for arg do
+    shift
+    [ "$arg" = "--home" ] && home=true && continue
+    set -- "$@" "$arg"
+done
+
+    if [[ $home ]]
+    then
+      /usr/bin/git --git-dir=$HOME/github/dotfiles/.cfg/ --work-tree=$HOME $@
+    else
+      /usr/bin/git --git-dir=$HOME/github/dotfiles/.cfg/ --work-tree=$HOME/github/dotfiles $@
+    fi
